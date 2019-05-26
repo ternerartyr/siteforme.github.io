@@ -117,5 +117,20 @@
       });
      });  
     </script>
+    <script>
+      $(document).ready(function() {
+        // навигация - плвный скролинг к якорю
+        ;(".slowly").on("click", function (event) {
+          // отменяем стандартную обработку нажатия по ссылки 
+          event.preventDefaut();
+          // забираем идентификатор блока с атрибута href
+          var id = $(this).attr('href'),
+          // узнаём высоту отначала страницы до блока на которой ссылаеться якорь
+          top = $(id).offset().top;
+           //анимруем переход на расстояние - top за 1500 мс
+           $('body,html').animate({scrollTop: top},800);
+        });
+      });
+    </script>
   </body>
 </html>
