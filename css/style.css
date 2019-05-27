@@ -20,7 +20,7 @@ body {
 	background-color: #000;
 	color: #fff;
 	height: 100vh;
-	background: #000 url(../img/main-bg.jpg) center center no-repeat;
+	/*background: #000 url(../img/main-bg.jpg) center center no-repeat;*/
 }
 .main-overlay {
 	position: absolute;
