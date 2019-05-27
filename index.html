@@ -55,9 +55,11 @@
            </div>
          </div>
          <div class="col-md-4">
-           <div class="portfolio-block"><img src="img/portfolio/3.jpg" alt="Работа №3">
-           <a class="link cd-modal-trigger" href="#0">Смотреть работу</a>
-           </div>
+           <div class="portfolio-block">
+          <img src="img/portfolio/3.jpg" alt="Работа №3">
+          <a class="link cd-modal-trigger" data-work='work-3' href="#0">Смотреть работу</a>
+          </div>
+         </div>
          </div>
        </div>
      </div> 
@@ -76,9 +78,9 @@
          <div class="col-md-6">
            <strong>Подпишитесь</strong>
            <div class="social-links">
-             <a href="#"><i class="icon-vk"></i></a>
-             <a href="#"><i class="icon-instagram"></i></a>
-             <a href="#"><i class="icon-twitter"></i></a>
+             <a href="https://www.facebook.com/ternerartur"><i class="icon-vk"></i></a>
+             <a href="https://www.instagram.com/arthur_hacknet/"><i class="icon-instagram"></i></a>
+             <a href="https://twitter.com/arthur_hacknet"><i class="icon-twitter"></i></a>
            </div>
          </div>
          <div class="col-md-3">
@@ -100,6 +102,7 @@
 <div class="cd-transition-layer"> 
   <div class="bg-layer"></div>
 </div> <!-- .cd-transition-layer -->
+
    <!-- Всплывающие модальные окна -->
 <div class="modal fade" id="work" role="dialog">
   <div class="modal-dialog" role="document">
@@ -121,11 +124,10 @@
     <script src="js/parallax.min.js"></script>
     <script>
      $(function() {
-      var link = $('a[data-toggle="modal"]');
+      var link = $('.cd-modal-trigger');
       link.on('click', function(event){
-        var work = $(this).attr('data-work');
-        var modal = $('.modal');
-        modal.find('.modal-content').load(work+'.html');
+        var work = $(this).attr('data-work'); 
+        $('.modal-content').load(work+'.html');
       });
      });  
     </script>
